@@ -1,4 +1,8 @@
 #!/bin/bash
+set -xo
+sed -i "s/127.0.0.1/${ORION_IP}/g" catkin_ws/src/snm_test_github/firos/config/config.json
+sed -i "s/1026/${ORION_PORT_EXT}/g" catkin_ws/src/snm_test_github/firos/config/config.json
+cat catkin_ws/src/snm_test_github/firos/config/config.json
 
 source /opt/ros/kinetic/setup.bash
 cd catkin_ws
