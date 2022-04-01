@@ -1,19 +1,19 @@
 {
-	"environment": "welaser",
-	"welaser": {
-		"server": {
-			"port": 10100
-		},
-		"contextbroker": {
-			"address": "127.0.0.1",
-			"port": 1026,
-			"subscription": {
-				"throttling": "PT0S",
-				"subscription_length": "P1D",
-				"subscription_refresh_delay": 0.5
-			}
-		},
-		"log_level": "INFO",
-		"interface": "eth0"
-	}
+    "environment": "welaser",
+    "welaser": {
+        "server": {
+            "port": 10100
+        },
+        "contextbroker": {
+            "address": "127.0.0.1",
+            "port": 1026,
+            "subscription": {
+                "throttling": "PT0S",
+                "subscription_length": "P1D",
+                "subscription_refresh_delay": 0.5
+            }
+        },
+        "log_level": "INFO",
+        "interface": "eth0"
+    }
 }
