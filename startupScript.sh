@@ -15,8 +15,6 @@ sed -i "s/carob/carob-$uuid/g" src/snm_test_github/firos/config/robots.json
 
 roslaunch carob_fieldnav carob_fieldnav.launch id:=$uuid &
 
-set -xo
-
 R="NotFound"
 while [[ "$R" == *"NotFound"* ]]; do
     R=$(curl -G -X GET "http://${ORION_IP}:${ORION_PORT_EXT}/v2/entities/carob-${uuid}" -d 'options=keyValues');
