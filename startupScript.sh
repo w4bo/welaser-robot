@@ -19,7 +19,7 @@ set -xo
 
 R="NotFound"
 while [[ "$R" == *"NotFound"* ]]; do
-    R=$(curl -G -X GET "http://${ORION_IP}:${ORION_PORT_EXT}/v2/entities/carob-8709356a-7001-4426-bde5-8cd4e75bdfea" -d 'options=keyValues');
+    R=$(curl -G -X GET "http://${ORION_IP}:${ORION_PORT_EXT}/v2/entities/carob-${uuid}" -d 'options=keyValues');
     echo $R;
     sleep 2;
 done
