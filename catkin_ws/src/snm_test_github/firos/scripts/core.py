@@ -66,7 +66,10 @@ if __name__ == '__main__':
     try:
         server = FirosServer("0.0.0.0", port)
     except Exception as ex:
+        sys.stderr.write("\n)
         sys.stderr.write('CB_COMMUNICATION_FAILED')
+        sys.stderr.write(ex)
+        sys.stderr.write("\n)
         exit(1)
     else:
         def signal_handler(signal, frame):
