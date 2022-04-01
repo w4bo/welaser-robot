@@ -14,7 +14,7 @@ roslaunch carob_fieldnav carob_fieldnav.launch id:=$uuid &
 
 sleep 10
 
-curl --location --request POST "http://${ORION_IP}:${ORION_PORT}/v2/entities/carob-${uuid}/attrs" \
+curl --location --request POST "http://${ORION_IP}:${ORION_PORT_EXT}/v2/entities/carob-${uuid}/attrs" \
   --header 'Content-Type: application/json' \
   --data-raw '{
   "Domain": {"value": "'"${DOMAIN}"'"},
